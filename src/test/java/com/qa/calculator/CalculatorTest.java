@@ -7,9 +7,10 @@ public class CalculatorTest {
 
 	@Test
 	public void test() {
-		Calculator calc = new Calculator();
-		int actualValue = calc.add(2, 2);
-		Assert.assertEquals(4, actualValue);
+		Operation opp = new Divide();
+		Calculator calc = new Calculator(opp);
+		double actualValue = calc.execute(5, 2);
+		Assert.assertEquals(2.5, actualValue, 0.0001);
 	}
 
 }

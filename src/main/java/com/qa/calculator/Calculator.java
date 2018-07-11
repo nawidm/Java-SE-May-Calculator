@@ -2,9 +2,13 @@ package com.qa.calculator;
 
 public class Calculator {
 
-	public double add(double num1, double num2) {
-		Add addOpp = new Add();
-		return addOpp.doOperation(num1, num2);
+	Operation opp;
+	
+	public Calculator(Operation opp) {
+		this.opp = opp;
 	}
 
+	public double execute(double num1, double num2) {
+		return this.opp.doOperation(num1, num2);
+	}
 }

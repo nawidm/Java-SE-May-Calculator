@@ -9,8 +9,9 @@ public class CalculatorTest {
 
 	@Test
 	public void test() {
-		Calculator calc = new Calculator();
-		double actualValue = calc.subtract(4, 2);
+		Operation opp = new Subtract();
+		Calculator calc = new Calculator(opp);
+		double actualValue = calc.execute(4, 2);
 		assertEquals(2, actualValue, 0.0001);
 	}
 
